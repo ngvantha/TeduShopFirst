@@ -20,5 +20,6 @@ namespace TeduShop.Model.Model
         [MaxLength(50)]
         [Required]
         public string Type { set; get; }
+
     }
 }
