@@ -8,8 +8,8 @@ using System.Threading.Tasks;
 
 namespace TeduShop.Model.Model
 {
-    [Table("Menus")]
-    public class Menu
+    [Table("SupportOnlines")]
+    public class SupportOnline
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
@@ -18,16 +18,25 @@ namespace TeduShop.Model.Model
         [MaxLength(50)]
         public string Name { set; get; }
         [Required]
-        [MaxLength(256)]
-        public string URL { set; get; }
-        public int? DisplayOrder { get; set; }
+        [MaxLength(50)]
+        public string Deparment { set; get; }
         [Required]
-        public int GruopID { set; get; }
-        [ForeignKey("GroupID")]
-        public virtual MenuGroup MenuGroup { get; set; }
-        [MaxLength(10)]
-        public string Target { set; get; }
+        [MaxLength(50)]
+        public string Skype { set; get; }
         [Required]
+        [MaxLength(50)]
+        public string Mobile { set; get; }
+        
+        [MaxLength(50)]
+        public string Email { set; get; }
+        
+        [MaxLength(50)]
+        public string Yahoo { set; get; }
+        
+        [MaxLength(50)]
+        public string Facebook { set; get; }
+      
         public bool Status { set; get; }
+        public int? DisplayOrder { set; get; }
     }
 }

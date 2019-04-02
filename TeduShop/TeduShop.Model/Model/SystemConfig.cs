@@ -8,13 +8,16 @@ using System.Threading.Tasks;
 
 namespace TeduShop.Model.Model
 {
-    [Table("Footers")]
-    public class Footer
+    [Table("SystemConfigs")]
+    public class SystemConfig
     {
         [Key]
-        [MaxLength(50)]
-        public string ID { set; get; }
+        public int ID { set; get; }
         [Required]
-        public string Content { set; get; }
+        [Column(TypeName ="varchar")]
+        [MaxLength(50)]
+        public string ValueString { set; get; }
+        public int? ValueInt { set; get; }
+
     }
 }

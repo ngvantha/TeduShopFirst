@@ -7,10 +7,10 @@ using System.Text;
 using System.Threading.Tasks;
 using TeduShop.Model.Abstract;
 
-namespace TeduShop.Model.Model
+namespace TeduShop.Model
 {
-    [Table("ProductCategories")]
-    public class ProductCategory: Auditable
+    [Table("Posts")]
+    public class Post:Auditable
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
@@ -20,15 +20,20 @@ namespace TeduShop.Model.Model
         public string Name { set; get; }
         [Required]
         [MaxLength(256)]
+        [Column(TypeName = "varchar")]
         public string Alias { set; get; }
-        [MaxLength(500)]
-        public string Description { set; get; }
-        public int? ParentID { set; get; }
-        public int? DisplayOrder { set; get; }
+        [Required]
+        public int CategoryID { set; get; }
         [MaxLength(256)]
         public string Image { set; get; }
+        [MaxLength(500)]
+        public string Description { set; get; }
+        public string Content { set; get; }
         public bool? HomeFlag { set; get; }
-        public virtual IEnumerable<Product> Products { set; get; }
+        public bool? HotFlag { set; get; }
+        public int? ViewCount { set; get; }
+        [ForeignKey("CategoryID")]
+        public virtual PostCategory PostCategory { set; get; }
 
     }
 }

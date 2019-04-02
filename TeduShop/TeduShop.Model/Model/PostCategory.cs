@@ -1,16 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using TeduShop.Model.Abstract;
 
-namespace TeduShop.Model.Model
+namespace TeduShop.Model
 {
-    [Table("ProductCategories")]
-    public class ProductCategory: Auditable
+    [Table("PostCategoris")]
+    public class PostCategory
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
@@ -20,6 +15,7 @@ namespace TeduShop.Model.Model
         public string Name { set; get; }
         [Required]
         [MaxLength(256)]
+        [Column(TypeName = "varchar")]
         public string Alias { set; get; }
         [MaxLength(500)]
         public string Description { set; get; }
@@ -28,7 +24,7 @@ namespace TeduShop.Model.Model
         [MaxLength(256)]
         public string Image { set; get; }
         public bool? HomeFlag { set; get; }
-        public virtual IEnumerable<Product> Products { set; get; }
+        public virtual IEnumerable<Post> Posts { set; get; }
 
     }
 }
