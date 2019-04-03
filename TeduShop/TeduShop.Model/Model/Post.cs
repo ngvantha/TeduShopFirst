@@ -7,7 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using TeduShop.Model.Abstract;
 
-namespace TeduShop.Model
+namespace TeduShop.Model.Model
 {
     [Table("Posts")]
     public class Post:Auditable
