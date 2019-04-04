@@ -22,9 +22,10 @@ namespace TeduShop.Model.Model
         public string URL { set; get; }
         public int? DisplayOrder { get; set; }
         [Required]
-        public int GruopID { set; get; }
+        public int GroupID { set; get; }
         [ForeignKey("GroupID")]
-        public virtual MenuGroup MenuGroup { get; set; }
+        public virtual MenuGroup MenuGroup { set; get; }
+
         [MaxLength(10)]
         public string Target { set; get; }
         [Required]
