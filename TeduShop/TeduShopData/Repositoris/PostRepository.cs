@@ -3,9 +3,9 @@ using TeduShopData.Infratructure;
 
 namespace TeduShopData.Repositoris
 {
-    public interface IPostRepository { }
+    public interface IPostRepository : IRepository<Post> { }
 
-    public class PostRepository : RepositoryBase<Post>, IPageRepository
+    public class PostRepository : RepositoryBase<Post>, IPostRepository
     {
         public PostRepository(DbFactory dbFactory) : base(dbFactory)
         {

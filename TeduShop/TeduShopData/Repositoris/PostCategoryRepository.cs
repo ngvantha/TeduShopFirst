@@ -3,7 +3,7 @@ using TeduShopData.Infratructure;
 
 namespace TeduShopData.Repositoris
 {
-    public interface IPostCategoryRepository { }
+    public interface IPostCategoryRepository:IRepository<PostCategory> { }
 
     public class PostCategoryRepository : RepositoryBase<PostCategory>, IPostCategoryRepository
     {
