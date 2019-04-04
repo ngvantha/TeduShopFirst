@@ -1,19 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data.Entity;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Data.Entity;
 using TeduShop.Model.Model;
 
 namespace TeduShopData
 {
-    public class TeduShopDbContext: DbContext
+    public class TeduShopDbContext : DbContext
     {
-        public TeduShopDbContext():base("TeduShopConnection")
-            {
+        public TeduShopDbContext() : base("TeduShopConnection")
+        {
             this.Configuration.LazyLoadingEnabled = false;
-            }
+        }
+
         public DbSet<Footer> Footers { set; get; }
         public DbSet<Menu> Menus { set; get; }
         public DbSet<MenuGroup> menuGroups { set; get; }
@@ -31,6 +27,7 @@ namespace TeduShopData
         public DbSet<SystemConfig> SystemConfigs { set; get; }
         public DbSet<Tag> Tags { set; get; }
         public DbSet<VisitorStatistic> VisitorStatistics { set; get; }
+
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);

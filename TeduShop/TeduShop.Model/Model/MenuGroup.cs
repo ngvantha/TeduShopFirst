@@ -17,5 +17,4 @@ namespace TeduShop.Model.Model
 
         public virtual IEnumerable<Menu> Menus { set; get; }
     }
-
 }

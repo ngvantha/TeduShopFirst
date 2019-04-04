@@ -15,6 +15,7 @@ namespace TeduShopData.Repositoris
         public ProductCategoryRepository(IDbFactory dbFactory) : base(dbFactory)
         {
         }
+
         public IEnumerable<ProductCategory> GetByAlias(string alias)
         {
             return this.DbContext.ProductCategories.Where(p => p.Alias == alias);

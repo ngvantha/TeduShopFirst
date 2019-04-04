@@ -7,6 +7,8 @@ namespace TeduShopData.Repositoris
 
     public class SlideRepository : RepositoryBase<Slide>, ISlideRepository
     {
-        public SlideRepository(DbFactory dbFactory) : base(dbFactory) { }
+        public SlideRepository(DbFactory dbFactory) : base(dbFactory)
+        {
+        }
     }
 }
