@@ -3,7 +3,7 @@ using TeduShopData.Infratructure;
 
 namespace TeduShopData.Repositoris
 {
-    public interface IPageRepository { }
+    public interface IPageRepository : IRepository<Page> { }
 
     public class PageRepository : RepositoryBase<Page>, IPageRepository
     {

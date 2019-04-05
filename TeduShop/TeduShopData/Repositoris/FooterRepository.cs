@@ -3,7 +3,7 @@ using TeduShopData.Infratructure;
 
 namespace TeduShopData.Repositoris
 {
-    public interface IFooterRepository
+    public interface IFooterRepository: IRepository<Footer>
     {
     }
 

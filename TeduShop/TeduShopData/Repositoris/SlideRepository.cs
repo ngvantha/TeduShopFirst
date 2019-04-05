@@ -3,7 +3,7 @@ using TeduShopData.Infratructure;
 
 namespace TeduShopData.Repositoris
 {
-    public interface ISlideRepository { }
+    public interface ISlideRepository : IRepository<Slide> { }
 
     public class SlideRepository : RepositoryBase<Slide>, ISlideRepository
     {

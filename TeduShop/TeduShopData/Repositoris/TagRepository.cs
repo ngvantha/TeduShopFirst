@@ -3,7 +3,7 @@ using TeduShopData.Infratructure;
 
 namespace TeduShopData.Repositoris
 {
-    public interface ITagRepository { }
+    public interface ITagRepository : IRepository<Tag> { }
 
     internal class TagRepository : RepositoryBase<Tag>, ITagRepository
     {
