@@ -23,22 +23,13 @@ namespace TeduShop.Web.Api
         {
             return CreateHttpResponse(requestMessage, () =>
             {
-                HttpResponseMessage response = null;
-                if (ModelState.IsValid)
-                {
-                    requestMessage.CreateErrorResponse(HttpStatusCode.BadRequest, ModelState);
-                }
-                else
-                {
-                    var listCategory = _postCategoryService.GetAll();
-                    
-                    response = requestMessage.CreateResponse(HttpStatusCode.OK, listCategory);
-                }
+                var listCategory = _postCategoryService.GetAll();
+                HttpResponseMessage response = requestMessage.CreateResponse(HttpStatusCode.OK, listCategory);
                 return response;
             });
         }
         //Post/Create
-        public HttpResponseMessage Post(HttpRequestMessage requestMessage,PostCategory postCategory)
+        public HttpResponseMessage Post(HttpRequestMessage requestMessage, PostCategory postCategory)
         {
             return CreateHttpResponse(requestMessage, () =>
             {
@@ -49,7 +40,7 @@ namespace TeduShop.Web.Api
                 }
                 else
                 {
-                    var category=_postCategoryService.Add(postCategory);
+                    var category = _postCategoryService.Add(postCategory);
                     _postCategoryService.Save();
                     response = requestMessage.CreateResponse(HttpStatusCode.Created, category);
                 }
