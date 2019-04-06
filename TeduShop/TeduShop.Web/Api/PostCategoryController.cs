@@ -66,6 +66,7 @@ namespace TeduShop.Web.Api
                 return response;
             });
         }
+        //delete
         public HttpResponseMessage Delete(HttpRequestMessage requestMessage, int id)
         {
             return CreateHttpResponse(requestMessage, () =>
