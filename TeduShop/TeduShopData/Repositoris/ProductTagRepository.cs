@@ -7,7 +7,7 @@ namespace TeduShopData.Repositoris
 
     internal class ProductTagRepository : RepositoryBase<ProductTag>, IProductTagRepository
     {
-        public ProductTagRepository(DbFactory dbFactory) : base(dbFactory)
+        public ProductTagRepository(IDbFactory dbFactory) : base(dbFactory)
         {
         }
     }

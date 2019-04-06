@@ -7,7 +7,7 @@ namespace TeduShopData.Repositoris
 
     public class PostTagRepository : RepositoryBase<PostTag>, IPostTagRepository
     {
-        public PostTagRepository(DbFactory dbFactory) : base(dbFactory)
+        public PostTagRepository(IDbFactory dbFactory) : base(dbFactory)
         {
         }
     }

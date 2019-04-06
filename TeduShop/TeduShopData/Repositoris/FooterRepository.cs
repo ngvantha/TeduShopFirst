@@ -9,7 +9,7 @@ namespace TeduShopData.Repositoris
 
     public class FooterRepository : RepositoryBase<Footer>, IFooterRepository
     {
-        public FooterRepository(DbFactory dbFactory) : base(dbFactory)
+        public FooterRepository(IDbFactory dbFactory) : base(dbFactory)
         {
         }
     }

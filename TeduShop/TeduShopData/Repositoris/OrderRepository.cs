@@ -9,7 +9,7 @@ namespace TeduShopData.Repositoris
 
     public class OrderRepository : RepositoryBase<Order>, IOrderRepository
     {
-        public OrderRepository(DbFactory dbFactory) : base(dbFactory)
+        public OrderRepository(IDbFactory dbFactory) : base(dbFactory)
         {
         }
     }
